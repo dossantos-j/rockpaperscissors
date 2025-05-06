@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="view"></div>
+    <!-- IF FUNCTION BASICS -->
+    <script> 
+        let year = prompt('what year is it', '');
+        
+        /* --- simple if function --- */
+        if (year == 2025) alert( 'You are right!' );
+
+        /* --- classic if function --- */
+        if (year == 1989) {
+            alert("Happy Birthday!");
+        } else if (year == 2016) {
+            alert("in " + `${year}` + " PT was champ");
+        };
+
+        /* --- switch function --- */
+        switch (year) {
+            case "2000":    /* if year === '2000' */
+                alert("Y2K");   /* then run */
+            break;
+            case "2001":    /* if year === '2001' */
+                alert("9/11");   /* then run */
+            break;
+            default:    /* all else */
+                alert("S W I T C H default");   /* then run */
+            break;
+        }
+
+        /* --- conditional "?" --- */
+
+        let latestDecade = /* condition */(year >= 2020) ? /* if true */ alert("we are in the 20s") : /* if false */ alert("we are BEFORE the 20s");
+        
+        /* --- multiple conditional "?" --- */
+        let yearSpelled = /* condition */(year == 2000) ? /* if true */ alert("spelled TWO THOUSAND") :
+                           /* condition */(year == 2020) ? /* if true */ alert("spelled TWO THOUSAND AND TWENTY") :
+                           /* condition */(year == 2024) ? /* if true */ alert("spelled TWO THOUSAND AND TWENTY FOUR") :
+                           /* else */ alert("not worth spelling...");
+    </script>
+</body>
+</html>

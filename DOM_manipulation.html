@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <h1>THE TITLE OF YOUR WEBPAGE</h1>
+    <div id="container"></div>
+
+    <button id="btn">Click Me</button>
+
+    
+    
+    <script>
+        const container = document.querySelector("#container");
+
+        const h3Header = document.createElement("h3");
+        h3Header.textContent = "h3 header example"
+        h3Header.style["color"] = "blue";
+        container.appendChild(h3Header);
+        
+        const paragraph = document.createElement("p");
+        paragraph.textContent = "Hey I’m red!"
+        paragraph.style["color"] = "red";
+        container.appendChild(paragraph);
+
+        const pinkDiv = document.createElement("div");
+        pinkDiv.setAttribute("style", "border: 5px solid black; background-color: pink;");
+        const h1Header = document.createElement("h1");
+        h1Header.textContent = "I’m in a div"
+        pinkDiv.appendChild(h1Header);
+        const h1p = document.createElement("p");
+        h1p.textContent = "ME TOO!"
+        pinkDiv.appendChild(h1p);
+        container.appendChild(pinkDiv);
+
+        const btn = document.querySelector("#btn");
+        
+        btn.addEventListener("click", function (e) {
+            e.target.style.background = "blue";
+        });
+        
+        btn.addEventListener("click", function (e) {
+  console.log(e.target);
+});
+
+
+
+    /* --- Query selectors --- */
+        element.querySelector(selector);
+        element.querySelectorAll(selectors);
+
+    /* --- Element creation --- */
+        document.createElement(tagName, [options]);
+        /* creates a new element of tag type tagName. */
+        /* This function does NOT put your new element into the DOM - it creates it in memory. */
+        /* Example: */
+        const div = document.createElement("div");
+        /* You can place the element into the DOM with one of the following 2 methods (Append) */
+
+    /* --- Append elements --- */
+        parentNode.appendChild(childNode);
+        /* appends childNode as the last child of parentNode. */
+        parentNode.insertBefore(newNode, referenceNode);
+        /* inserts newNode into parentNode before referenceNode. */
+        
+    /* --- Remove elements --- */
+        parentNode.removeChild(child);
+        /* removes child from parentNode on the DOM and returns a reference to child. */
+
+    /* --- Adding inline style --- */
+        /* adds the indicated style rule to the element in the div variable */
+        div.style["background-color"] = "blue";
+
+        /* adds several style rules */
+        div.style.cssText = "color: blue; background: white;";
+
+        /* adds several style rules */
+        div.setAttribute("style", "color: blue; background: white;");
+
+    /* --- Editing attributes --- */
+        /* if id exists, update it to 'theDiv', else create an id with value "theDiv" */
+        div.setAttribute("id", "theDiv");
+
+        /* returns value of specified attribute, in this case "theDiv" */
+        div.getAttribute("id");
+
+        /* removes specified attribute */
+        div.removeAttribute("id");
+        /* See MDN’s section on HTML Attributes for more information on available attributes. */
+
+    /* --- Working with classes --- */
+        /* adds class "new" to your new div */
+        div.classList.add("new");
+
+        /* removes "new" class from div */
+        div.classList.remove("new");
+
+        /* if div doesn't have class "active" then add it, or if it does, then remove it */
+        div.classList.toggle("active");
+        /* It is often standard (and cleaner) to toggle a CSS style rather than adding and removing inline CSS. */
+
+    /* --- Adding text content --- */
+        /* creates a text node containing "Hello World!" and inserts it in div */
+        div.textContent = "Hello World!";
+    
+    /* --- Adding HTML content --- */
+        /* renders the HTML inside div */
+        div.innerHTML = "<span>Hello World!</span>";
+
+    /* --- Events --- */
+        /* Event listener */
+        btn.addEventListener("click", () => {
+            console.log("hello");
+        });
+        /* need to state the function as well */
+        /* allows multiple event listeners for same object */
+
+    /* --- Page Load Events --- */
+        document.addEventListener('DOMContentLoaded',() => {
+            // handle DOMContentLoaded event
+            // the browser fully loaded HTML and completed building the DOM tree.
+            // It hasn’t loaded external resources like stylesheets and images.
+        });
+
+        document.addEventListener('load',() => {
+            // handle load event
+            // the browser fully loaded the HTML and external resources like images and stylesheets.
+        });
+
+        document.addEventListener('beforeunload',() => {
+            // handle beforeunload event
+            // fires before the page and resources are unloaded.
+            // to show a confirmation dialog to confirm if you want to leave the page
+        });
+
+        document.addEventListener('unload',() => {
+            // handle unload event
+            // when the page has completely unloaded.
+            // To send the analytic data or to clean up resources.
+        });
+    
+    
+    /* --- Mouse Events --- */
+        let btn = document.querySelector('#btn');
+        
+        btn.addEventListener('click',(event) => {
+            console.log('clicked');
+        });    
+        
+        // 'mousedown' fires when you press the mouse button on the element.
+        // 'mouseup' fires when you release the mouse button on the element.
+        // 'click' fires when one mousedown and one mouseup detected on the element.
+        // 'dblclick' takes two click events.
+        // 'mouseover' fires when the mouse cursor is outside of the element and then moves inside the boundaries of the element.
+        // 'mouseout' fires when the mouse cursor is over an element and then moves another element.
+        // 'mouseenter' fires when the mouse cursor is outside of an element and then moves inside the boundaries of the element.
+        // 'mouseleave' fires when the mouse cursor is over an element and then moves to the outside of the element’s boundaries.
+    
+    /* --- Keyboard Events --- */
+        let msg = document.getElementById('#message');
+        
+        msg.addEventListener("keydown", (event) => {
+            // handle keydown
+        });
+        // 'keydown' fires when you press a key on the keyboard and fires repeatedly while you’re holding down the key.
+        // 'keyup' fires when you release a key on the keyboard.
+        // 'keypress' fires when you press a character keyboard. Fires repeatedly while you hold down the key on the keyboard.
+    
+    /* --- Event Delegation --- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

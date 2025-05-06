@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="output"></div>
+    <script>
+        /* --- for...of --- */
+        const animals = ["cat", "dog", "bird"];
+
+        for (const animal of animals) {
+            /* console.log("for...of " + animal); */
+        }
+
+        /* --- map() --- */
+        /* do something to each item in a collection and create a new collection containing the changed items */
+
+        let toUpper = (string) => {
+            return string.toUpperCase();
+        }
+
+        const cities = ["London", "Paris", "Lisbon"];
+
+        const upperCities = cities.map(toUpper);
+        /* new array upperCities is same as cities but uppercased */
+        
+        /* --- filter() --- */
+        /* test each item in a collection, and create a new collection containing only items that match */
+        let fruitSartsWithA = (fruit) => {
+            return fruit.startsWith("A");
+        }
+
+        const fruits = ["Apple", "Orange", "Banana", "Apricot"];
+
+        const fruitsA = fruits.filter(fruitSartsWithA);
+        /* the result is an array containing only fruits whose names start with "A" */
+
+        /*  --- for --- */
+        for (let i = 0; i < 5; i++) {
+            /* console.log("for loop " + i); */
+        }
+
+        /* --- break; --- */
+        /* exit a loop before all the iterations have been completed */
+
+        const planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"];
+
+        for (const planet of planets) {
+            /* if (planet.startsWith("E")){
+                console.log("Earth - we reached home.");
+                break;
+            };
+            console.log(planet); */
+        }
+
+        /* --- continue; --- */
+        /* it skips to the next iteration of the loop */
+
+        const carBrands = ["EU - Audi", "EU - BMW", "USA - Ford", "USA - Cadillac", "USA - Chevrolet", "Japan - Honda", "Japan - TOYOTA", "USA - Subaru", "EU - Bentley"];
+
+        for (carBrand of carBrands) {
+            /* if (carBrand.startsWith("EU")){
+                console.log("EU car");
+                continue; */
+                /* at this point it will skip to the next object in the array and not execute the remaining code in the loop */
+            /* }
+            console.log(carBrand + " - STOP - this car is not made in the EU"); */
+        }
+
+        /* --- while --- */
+
+        const dogs = ["india", "ines", "nahla", "tasha"];
+
+        let i = 0;
+
+        /* while (i < dogs.length) {
+            console.log(dogs[i]);
+            i++;
+        } */
+
+        /* --- do...while --- */
+        /* very similar, but provides a variation on the while structure */
+
+        const cats = ["clarinha", "black", "tommy", "panda"];
+
+        do {
+            console.log(`This is my cat ${cats[i]}`);
+            i++;
+        } while (i < cats.length);
+
+
+
+
+
+    </script>
+</body>
+</html>
